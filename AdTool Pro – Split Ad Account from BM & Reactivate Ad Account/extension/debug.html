@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AdTool Pro Debug</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+        .debug-section {
+            background: #2a2a2a;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #444;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 3px;
+            margin: 5px 0;
+        }
+        .status.success { background: #4CAF50; }
+        .status.error { background: #f44336; }
+        .status.warning { background: #ff9800; }
+        .status.info { background: #2196F3; }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover { background: #45a049; }
+        pre {
+            background: #000;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔧 AdTool Pro Debug Tool</h1>
+    
+    <div class="debug-section">
+        <h2>📊 Trạng thái Extension</h2>
+        <div id="extensionStatus">Đang kiểm tra...</div>
+    </div>
+    
+    <div class="debug-section">
+        <h2>🔍 Kiểm tra Tab Facebook</h2>
+        <button id="checkFacebookBtn">Kiểm tra Tab Facebook</button>
+        <div id="facebookTabsStatus">Chưa kiểm tra</div>
+    </div>
+    
+    <div class="debug-section">
+        <h2>📡 Kiểm tra Content Script</h2>
+        <button id="checkContentBtn">Kiểm tra Content Script</button>
+        <button id="injectContentBtn">Inject Content Script</button>
+        <div id="contentScriptStatus">Chưa kiểm tra</div>
+    </div>
+    
+    <div class="debug-section">
+        <h2>🔧 Kiểm tra Injected Script</h2>
+        <button id="checkInjectedBtn">Kiểm tra Injected Script</button>
+        <button id="injectInjectedBtn">Inject Injected Script</button>
+        <div id="injectedScriptStatus">Chưa kiểm tra</div>
+    </div>
+    
+    <div class="debug-section">
+        <h2>⚙️ Thử nghiệm Kết nối</h2>
+        <button id="testConnectionBtn">Test Kết nối</button>
+        <div id="connectionStatus">Chưa test</div>
+    </div>
+    
+    <div class="debug-section">
+        <h2>📋 Log Chi tiết</h2>
+        <button id="clearLogBtn">Xóa Log</button>
+        <pre id="debugLog"></pre>
+    </div>
+
+    <script src="debug.js"></script>
+</body>
+</html> 
